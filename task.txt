@@ -1,0 +1,23 @@
+User ->
+name
+email
+password
+token
+role
+allowAccess
+
+Task
+admin id
+User(model)
+time schedule -> 
+priority
+
+admin Dashboard ->
+display All live task -> show who is working on it
+
+employee dashboard -> 
+show assigned task
+add extra person if required
+approve eod if completes the task
+reshedule the task with reason
+
