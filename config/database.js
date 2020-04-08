@@ -1,14 +1,19 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
+const db =
+  process.env.NODE_ENV === "production"
+    ? "mongodb://kp:krishna28@ds221416.mlab.com:21416/heroku_92hl6fnn"
+    : "mongodb://localhost:27017/task-management";
 const setUpDb = () => {
-    mongoose.connect('mongodb://localhost:27017/task-management', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
+  mongoose
+    .connect(db, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     })
-        .then(() => {
-            console.log('DB Connected Successfully')
-        })
-        .catch(err => {
-            console.log(err)
-        })
-}
-module.exports = setUpDb
+    .then(() => {
+      console.log("DB Connected Successfully");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+module.exports = setUpDb;
