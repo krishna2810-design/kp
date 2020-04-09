@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const db = "mongodb://kp:krishna28@ds221416.mlab.com:21416/heroku_92hl6fnn";
-//   process.env.NODE_ENV === "production"
-//     ? "mongodb://kp:krishna28@ds221416.mlab.com:21416/heroku_92hl6fnn"
-//     : "mongodb://localhost:27017/task-management";
+const db =
+  process.env.NODE_ENV === "production"
+    ? "mongodb://kp:krishna28@ds221416.mlab.com:21416/heroku_92hl6fnn"
+    : "mongodb://localhost:27017/task-management";
 const setUpDb = () => {
   mongoose
     .connect(db, {
